@@ -26,25 +26,25 @@ app.use(
 
 const db = require("./app/models");
 
-async function testConnection() {
-  try {
-    await db.sequelize.authenticate();
+// async function testConnection() {
+//   try {
+//     await db.sequelize.authenticate();
 
-    await db.sequelize.sync();
+//     await db.sequelize.sync();
     
-    // // drop the table if it already exists
-    // db.sequelize.sync({ force: true }).then(() => {
-    //   console.log("Drop and re-sync db.");
-    // });
+//     // // drop the table if it already exists
+//     // db.sequelize.sync({ force: true }).then(() => {
+//     //   console.log("Drop and re-sync db.");
+//     // });
 
-    console.log("Connected to Database.");
+//     console.log("Connected to Database.");
 
-  } catch (e) {
-    console.log(e.message);
-  }
-}
+//   } catch (e) {
+//     console.log(e.message);
+//   }
+// }
 
-testConnection();
+//testConnection();
 
 // simple route
 app.get("/", (req, res) => {
