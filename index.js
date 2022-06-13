@@ -14,7 +14,6 @@ app.use(express.json());
 app.use(
   express.urlencoded({ extended: true })
 );
-const db = require("./app/models");
 app.get("/", (req, res) => {
   res.json({ message: "REST APIs with NodeJs + ExpressJs + MySQL + Sequelize" });
 });
